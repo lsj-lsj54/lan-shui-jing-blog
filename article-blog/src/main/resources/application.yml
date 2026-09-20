@@ -1,0 +1,19 @@
+# Redis 配置（从 bootstrap.yml 移至此处，规范配置分层）
+spring:
+  redis:
+    host: 192.168.175.128
+    port: 6379
+    password: "123456"
+    database: 0
+    timeout: 3000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 2
+        max-wait: -1ms
+
+# 日志配置
+logging:
+  level:
+    com.lsj: debug
