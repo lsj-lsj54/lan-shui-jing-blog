@@ -2,7 +2,12 @@
 
 个人博客系统：写文章、管分类、评论点赞，并用 **Spring AI ChatClient + DeepSeek** 按关键词检索技术知识、写入数据库后可反复查阅。
 
-仓库：[lsj-lsj54/lan-shui-jing-blog](https://github.com/lsj-lsj54/lan-shui-jing-blog)
+仓库：[lsj-lsj54/lan-shui-jing-blog](https://github.com/lsj-lsj54/lan-shui-jing-blog)（前后端合一，本仓库保留）
+
+分离后的独立仓库：
+
+- 前端：[lsj-lsj54/lan-shui-jing-blog-frontend](https://github.com/lsj-lsj54/lan-shui-jing-blog-frontend)
+- 后端：[lsj-lsj54/lan-shui-jing-blog-backend](https://github.com/lsj-lsj54/lan-shui-jing-blog-backend)
 
 ## 功能
 
