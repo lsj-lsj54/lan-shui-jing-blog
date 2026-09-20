@@ -1,0 +1,8 @@
+.git
+.idea
+**/.idea
+**/target
+frontend/node_modules
+frontend/dist
+*.md
+.env

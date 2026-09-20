@@ -1,6 +1,9 @@
+server:
+  port: ${SERVER_PORT:8080}
+
 # JWT 配置（与用户服务保持一致）
 jwt:
-  secret: lsj-blog-secret-key-2024-must-be-at-least-256-bits-long-for-hs256
+  secret: ${JWT_SECRET:lsj-blog-secret-key-2024-must-be-at-least-256-bits-long-for-hs256}
 
 spring:
   cloud:

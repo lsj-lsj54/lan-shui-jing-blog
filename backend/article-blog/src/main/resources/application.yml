@@ -1,9 +1,16 @@
-# Redis 配置（从 bootstrap.yml 移至此处，规范配置分层）
+server:
+  port: ${SERVER_PORT:8082}
+
 spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://127.0.0.1:3306/blog_article?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
   redis:
-    host: 192.168.175.128
-    port: 6379
-    password: "123456"
+    host: ${SPRING_REDIS_HOST:192.168.175.128}
+    port: ${SPRING_REDIS_PORT:6379}
+    password: ${SPRING_REDIS_PASSWORD:123456}
     database: 0
     timeout: 3000ms
     lettuce:

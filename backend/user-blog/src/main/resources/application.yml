@@ -1,7 +1,17 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://127.0.0.1:3306/blog_user?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
 # JWT 配置
 jwt:
   # 密钥（生产环境请修改为更复杂的密钥，并从配置中心/环境变量读取）
-  secret: lsj-blog-secret-key-2024-must-be-at-least-256-bits-long-for-hs256
+  secret: ${JWT_SECRET:lsj-blog-secret-key-2024-must-be-at-least-256-bits-long-for-hs256}
   # Token 过期时间：24小时（毫秒）
   expire: 86400000
 
