@@ -1,7 +1,12 @@
 server:
-  port: 8083
+  port: ${SERVER_PORT:8083}
 
 spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://127.0.0.1:3306/blog_ai?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
   ai:
     deepseek:
       api-key: ${DEEPSEEK_API_KEY:}
