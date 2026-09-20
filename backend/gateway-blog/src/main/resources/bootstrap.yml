@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: gateway-blog
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 192.168.175.128:8848
+      discovery:
+        namespace: public
+        group: DEFAULT_GROUP
+      config:
+        file-extension: yaml
+        namespace: public
+        group: DEFAULT_GROUP
+        refresh-enabled: true

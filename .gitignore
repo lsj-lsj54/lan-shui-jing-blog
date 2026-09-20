@@ -1,0 +1,47 @@
+# Root
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+
+# Backend
+backend/target/
+backend/**/target/
+backend/.kotlin/
+!backend/**/src/main/**/target/
+!backend/**/src/test/**/target/
+
+# Maven / Gradle
+.mvn/wrapper/maven-wrapper.jar
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Eclipse / NetBeans
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/

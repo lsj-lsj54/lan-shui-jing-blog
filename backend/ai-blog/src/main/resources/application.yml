@@ -1,0 +1,16 @@
+server:
+  port: 8083
+
+spring:
+  ai:
+    deepseek:
+      api-key: ${DEEPSEEK_API_KEY:}
+      chat:
+        options:
+          model: deepseek-chat
+          temperature: 0.3
+
+# 日志配置
+logging:
+  level:
+    com.lsj: debug

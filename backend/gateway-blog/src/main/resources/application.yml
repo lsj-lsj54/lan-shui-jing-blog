@@ -1,0 +1,35 @@
+# JWT 配置（与用户服务保持一致）
+jwt:
+  secret: lsj-blog-secret-key-2024-must-be-at-least-256-bits-long-for-hs256
+
+spring:
+  cloud:
+    gateway:
+      httpclient:
+        connect-timeout: 5000
+        response-timeout: 120s
+      routes:
+        - id: user-blog
+          uri: lb://user-blog
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - StripPrefix=1
+        - id: article-blog
+          uri: lb://article-blog
+          predicates:
+            - Path=/api/article/**
+          filters:
+            - StripPrefix=1
+        - id: ai-blog
+          uri: lb://ai-blog
+          predicates:
+            - Path=/api/ai/**
+          filters:
+            - StripPrefix=1
+
+# 日志配置
+logging:
+  level:
+    com.lsj: debug
+    org.springframework.cloud.gateway: debug
